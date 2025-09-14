@@ -1,79 +1,57 @@
 import os
-from google.auth.transport import Request
+from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-text = """ 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Tyrannosaurus Rex: The Reigning King of Strength and Size</title>
-</head>
-<body>
-    <h1>Tyrannosaurus Rex: The Reigning King of Strength and Size</h1>
-    <p>When we think of raw power and imposing presence, few creatures, past or present, can rival the legendary Tyrannosaurus Rex. This iconic dinosaur, whose name means "tyrant lizard king," truly lived up to its moniker, dominating the late Cretaceous period with an awe-inspiring combination of immense size and unparalleled strength.</p>
+def postBlog(text):
 
-    <h2>A Colossus Among Dinosaurs</h2>
-    <p>The sheer scale of the T-Rex is difficult to comprehend. Imagine a creature that could stretch up to 40 feet (12 meters) long, stand 20 feet (6 meters) tall, and weigh anywhere from 8 to 14 tons. To put that into perspective, an adult male African elephant, one of the largest land animals alive today, typically weighs around 6 tons. The T-Rex wasn't just big; it was a mobile fortress of muscle and bone.</p>
+    creds = None
 
-    <h2>Unmatched Predatory Power</h2>
-    <p>But size was only one part of its terrifying arsenal. The true measure of the T-Rex's might lay in its incredible strength, particularly its bite force. Scientists estimate that the Tyrannosaurus Rex possessed the strongest bite of any known terrestrial animal, capable of delivering a crushing force of up to 12,800 pounds per square inch (psi). This is enough to shatter bones and tear through flesh with devastating efficiency, far exceeding the bite force of any modern predator.</p>
-    <ul>
-        <li><strong>Modern Bears:</strong> A grizzly bear's bite force is around 1,200 psi.</li>
-        <li><strong>Large Crocodiles:</strong> The saltwater crocodile, known for its powerful jaws, can exert about 3,700 psi.</li>
-        <li><strong>Lions and Tigers:</strong> These apex predators of today have bite forces ranging from 650-1,000 psi.</li>
-    </ul>
-    <p>None come close to the bone-crushing power of the T-Rex. Its robust skull, massive jaw muscles, and serrated, banana-sized teeth were perfectly engineered for dismembering prey, making it an undisputed apex predator.</p>
+    if os.path.exists("tokens.json"):
+        creds = Credentials.from_authorized_user_file('tokens.json', scopes=["https://www.googleapis.com/auth/blogger"])
+        
+    if not creds or not creds.valid:
+        
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file(
+                'client_secrets.json',
+                scopes=["https://www.googleapis.com/auth/blogger"]
+            )
 
-    <h2>Beyond the Bite: A Powerful Hunter</h2>
-    <p>Beyond its fearsome jaws, the T-Rex's entire physique was built for power. Its massive hind legs, though seemingly heavy, were muscular and capable of propelling its enormous body at considerable speeds for short bursts, making it an effective pursuit predator. The small, two-fingered forelimbs, while a subject of much debate, were likely powerful enough for gripping or stabilizing prey during a kill.</p>
+            creds = flow.run_local_server(port=0)
 
-    <h2>Conclusion: A Legacy of Dominance</h2>
-    <p>When compared to the strongest species of today, the Tyrannosaurus Rex stands as a testament to prehistoric might. While modern animals like elephants possess immense strength for their size, and predators like polar bears and crocodiles are formidable, none combine the sheer scale, bone-shattering bite force, and predatory prowess that defined the T-Rex. It remains, in every sense of the word, the ultimate king of the terrestrial food chain, a symbol of raw, untamed power that continues to captivate our imaginations.</p>
-</body>
-</html>
+            with open("tokens.json", "w") as file:
+                file.write(creds.to_json())
 
-"""
-creds = None
+    try:
+        service = build("blogger", "v3", credentials=creds)
 
-if os.path.exists("tokens.json"):
-    creds = Credentials.from_authorized_user_file('tokens.json', scopes=["https://www.googleapis.com/auth/blogger"])
-    
-if not creds or not creds.valid:
-    
-    if creds and creds.expired and creds.refresh_token:
-        creds.refresh(Request())
-    
-    else:
-        flow = InstalledAppFlow.from_client_secrets_file(
-            'client_secrets.json',
-            scopes=["https://www.googleapis.com/auth/blogger"]
-        )
+        blog_id = "3115491518418580833"
 
-        creds = flow.run_local_server(port=0)
+        post_body = {
+            "kind": "blogger#post",
+            "blog":{
+                "id": blog_id
+            },
+            "title": "Test Post",
+            "content": text,
+            "labels": ['test', 'first']
+        }
+        new_post = service.posts().insert(blogId = blog_id, body=post_body, isDraft=False).execute()
 
-        with open("tokens.json", "w") as file:
-            file.write(creds.to_json())
+        print(f"The new post is at url: {new_post['url']}")
+        
+    except HttpError as error:
+        print(f"An error Occurred: {error}")
+        
 
-try:
-    service = build("blogger", "v3", credentials=creds)
-
-    blog_id = "3115491518418580833"
-
-    post_body = {
-        "kind": "blogger#post",
-        "blog":{
-            "id": blog_id
-        },
-        "title": "Test Post",
-        "content": text,
-        "labels": ['test', 'first']
-    }
-    new_post = service.posts().insert(blogId = blog_id, body=post_body, isDraft=False).execute()
-
-    print(f"The new post is at url: {new_post['url']}")
-    
-except HttpError as error:
-    print(f"An error Occurred: {error}")
+if __name__ == "__main__":
+    text = """
+    <h1>The Majesty of the Burj Khalifa: A Pinnacle of Human Achievement</h1>\n<p>Standing at an astounding height of 828 meters (2,717 feet), the Burj Khalifa in Dubai is not just the world's tallest building, but also a symbol of human ambition, innovation, and architectural brilliance. This iconic skyscraper dominates the Dubai skyline, drawing millions of visitors annually to marvel at its sheer scale and intricate design.</p>\n<h2>A Visionary Design and Engineering Marvel</h2>\n<p>Designed by Adrian Smith of Skidmore, Owings & Merrill (SOM), the Burj Khalifa's design is inspired by the Hymenocallis flower, featuring a triple-lobed footprint that maximizes views of the Arabian Gulf. Its Y-shaped plan provides an inherently stable configuration for the supertall structure and offers an optimal residential and hotel layout. The building tapers as it rises, with setbacks at different levels, which helps to reduce the effect of wind forces on the structure.</p>\n<p>The construction of the Burj Khalifa was a monumental undertaking, involving over 12,000 workers and utilizing groundbreaking engineering techniques. The foundation alone consists of a massive reinforced concrete mat supported by piles, ensuring its stability in challenging desert conditions. The exterior is clad in reflective glazing, aluminum and textured stainless steel spandrel panels, and vertical stainless steel fin elements, all designed to withstand Dubai's intense summer heat.</p>\n<h2>More Than Just a Building</h2>\n<p>Beyond its record-breaking height, the Burj Khalifa is a mixed-use skyscraper, housing luxury residences, corporate suites, and the Armani Hotel. It boasts several observation decks, including \"At the Top\" on the 124th and 125th floors, and \"At the Top SKY\" on the 148th floor, offering unparalleled panoramic views of Dubai and beyond. The surrounding Downtown Dubai area, with its stunning fountains and vibrant atmosphere, further enhances the Burj Khalifa's appeal as a global landmark.</p>\n<h2>A Global Icon and Tourist Destination</h2>\n<p>Since its inauguration in 2010, the Burj Khalifa has become synonymous with Dubai's rapid growth and futuristic vision. It stands as a testament to what can be achieved with bold ambition and cutting-edge technology. Its presence has significantly boosted Dubai's tourism industry, attracting visitors from all corners of the world eager to experience this architectural wonder firsthand. The Burj Khalifa is not just a building; it is an experience, a statement, and an enduring symbol of human endeavor reaching for the sky.</p>
+    """
+    postBlog(text)

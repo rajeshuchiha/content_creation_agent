@@ -10,6 +10,7 @@ from langgraph.graph.message import add_messages
 from langgraph.graph import StateGraph, START, END
 from langgraph.prebuilt import ToolNode
 from dotenv import load_dotenv
+from blogger import postBlog
 
 load_dotenv()
 
@@ -35,7 +36,7 @@ def save(filename: str, tweet: str, blog_post: str) -> str:
 
     Args:
         filename (str): Name of the text file.
-        tweet (str): A short message (max 15 words) including hashtags (#), mentions (@), 
+        tweet (str): A short message (max 15 words) including hashtags (#), mentions (@), w
                     and emojis 😃🔥✨ when relevant.
                     
         blog_post (str): A detailed and informative blog_post of atleast 250 words, expanding on the tweets theme.
@@ -44,6 +45,7 @@ def save(filename: str, tweet: str, blog_post: str) -> str:
         filename = f"{filename}.txt"
         
     #post code --> write later (check the returns)
+    postBlog(blog_post)
         
     #Save file code
     document_content = f"Tweet: \n{tweet}\nBlog Post: \n{blog_post}"
