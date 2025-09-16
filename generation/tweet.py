@@ -15,5 +15,5 @@ client = tweepy.Client(bearer_token, api_key, api_key_secret, access_token, acce
 auth = tweepy.OAuth1UserHandler(api_key, api_key_secret, access_token, access_token_secret)
 api = tweepy.API(auth)
 
-text = "🏏🏆 India's glorious 2011 Cricket World Cup win at home! Dhoni's six, a nation's dream! ✨ #CWC2011 #TeamIndia #Cricket"
+text = "T-Rex: The ultimate apex predator! 🦖💪 Unmatched size & bite force. Modern giants don't compare! #TyrannosaurusRex #DinosaurPower"
 client.create_tweet(text=text)

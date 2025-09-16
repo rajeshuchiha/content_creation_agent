@@ -10,9 +10,9 @@ Base = declarative_base()
 class Article(Base):
     __tablename__ = "Articles"
     id = Column(Integer, primary_key=True)
-    url = Column(String)
     title = Column(String)
-    content = Column(String)
+    url = Column(String, nullable=False, unique=True)
+    timestamp = Column(DateTime)
     
 Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)

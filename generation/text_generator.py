@@ -1,18 +1,22 @@
 from typing_extensions import Sequence, TypedDict, Annotated
 from langchain.chat_models import init_chat_model
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_core.vectorstores import InMemoryVectorStore 
-from langchain_core.documents import Document
-from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage, ToolMessage, SystemMessage
 from langchain_core.tools import tool
 from langgraph.graph.message import add_messages
 from langgraph.graph import StateGraph, START, END
 from langgraph.prebuilt import ToolNode
 from dotenv import load_dotenv
-from blogger import postBlog
+from generation.blogger import postBlog
+import os
 
 load_dotenv()
+
+AUTO_MODE = False
+
+def toggle_auto():
+    global AUTO_MODE    
+    AUTO_MODE = True
+
 
 class AgentState(TypedDict):
     messages: Annotated[Sequence[BaseMessage], add_messages]
@@ -48,9 +52,12 @@ def save(filename: str, tweet: str, blog_post: str) -> str:
     postBlog(blog_post)
         
     #Save file code
+    DATA_PATH = r"C:\Users\rvisw\OneDrive\Desktop\shashank_Project\content_creation_agent\data"
+    FILE_PATH = os.path.join(DATA_PATH, filename)
+    
     document_content = f"Tweet: \n{tweet}\nBlog Post: \n{blog_post}"
     try: 
-        with open(filename, "w", encoding="utf-8") as file:
+        with open(FILE_PATH, "w", encoding="utf-8") as file:
             file.write(document_content)
         print(f"\n Document saved to {filename}")
         return f"Document has been saved successfully to {filename}"
@@ -59,6 +66,24 @@ def save(filename: str, tweet: str, blog_post: str) -> str:
     
 tools = [update, save]
 llm = init_chat_model('gemini-2.5-flash', model_provider="google_genai").bind_tools(tools)
+
+#   Function to automate user input
+def get_User_or_Auto_input(state: AgentState) -> HumanMessage :
+    
+    if AUTO_MODE:
+        user_input = f"Save it."
+        user_message = HumanMessage(content=user_input)
+    
+    elif not state["messages"]:
+        user_input = "I'm ready to help you update the document. What would you like to create?"
+        user_message = HumanMessage(content=user_input)
+        
+    else:
+        user_input = input("\n How would you like to update the document?")
+        print(f"\n USER: {user_input}")
+        user_message = HumanMessage(content=user_input)
+        
+    return user_message
 
 
 def our_agent(state: AgentState) -> AgentState:
@@ -98,14 +123,7 @@ def our_agent(state: AgentState) -> AgentState:
         }}  
         """)
     
-    if not state["messages"]:
-        user_input = "I'm ready to help you update the document. What would you like to create?"
-        user_message = HumanMessage(content=user_input)
-        
-    else:
-        user_input = input("\n How would you like to update the document?")
-        print(f"\n USER: {user_input}")
-        user_message = HumanMessage(content=user_input)
+    user_message = get_User_or_Auto_input(state)
 
     prompt = [system_prompt] + list(state["messages"]) + [user_message]
     
@@ -161,10 +179,17 @@ graph.add_conditional_edges(
 
 app = graph.compile()
 
-def run_document_agent():
+def run_document_agent(text=None, auto=False):
     print("\n *****DRAFTER*****")
-    state = {"messages": [], 'tweet':"", 'blog_post':""}
     
+    # Toggle Automatic
+    if auto: toggle_auto()
+    
+    if text is None: 
+        state = {"messages": [], 'tweet':"", 'blog_post':""}
+    else:
+        state = {"messages": [HumanMessage(content=text)], 'tweet':"", 'blog_post':""}
+        
     for step in app.stream(state, stream_mode="values"):
         if "messages" in step:
             print_messages(step["messages"])
@@ -173,9 +198,5 @@ def run_document_agent():
 if __name__ == "__main__":
     run_document_agent()
             
-
-# embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
-
-# text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 
 

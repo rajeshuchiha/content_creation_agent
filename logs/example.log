@@ -4,3 +4,93 @@ INFO:sqlalchemy.engine.Engine:[generated in 0.00048s] ('https://en.wikipedia.org
 INFO:sqlalchemy.engine.Engine:COMMIT
 ERROR:root:Error fetching https://en.wikipia.org/wiki/Tiger: HTTPSConnectionPool(host='en.wikipia.org', port=443): Max retries exceeded with url: /wiki/Tiger (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001F66D39F250>: Failed to resolve 'en.wikipia.org' ([Errno 11001] getaddrinfo failed)"))
 ERROR:root:Error fetching https://en.wikipia.org/wiki/Tiger: HTTPSConnectionPool(host='en.wikipia.org', port=443): Max retries exceeded with url: /wiki/Tiger (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000023C7F5FF1C0>: Failed to resolve 'en.wikipia.org' ([Errno 11001] getaddrinfo failed)"))
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (url, title, content) VALUES (?, ?, ?)
+INFO:sqlalchemy.engine.Engine:[generated in 0.00046s] ('https://edition.cnn.com/2025/09/14/us/peter-mutabazi-masiko-foster-dad-cec', ' \n\n\n\n\n\n      A homeless youth asked a stranger for food. The man responded with a question that changed the kid’s life forever\n    \n\n\n\n\n\ ... (15 characters truncated) ... n\n\n\n\n\n\nUpdated Sep 14, 2025, 8:00 AM ET\nPublished Sep 14, 2025, 8:00 AM ET\n\n\n\n\n\n\nPUBLISHED Sep 14, 2025, 8:00 AM ET\n\n\n\n\n\n\n\n\n\n', '\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAfrica\n\n\n\n\n\n\nPoverty\n\n\n\n\n\n\n\n\n            See all topics\n\n\n\n\n\n\n\n\n\n\n\nFacebook\ ... (16600 characters truncated) ...        \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n                    Follow\n            \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\nAd Feedback\n\n\n\n\n\n\n')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-index-com-news.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-3.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-2.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-1.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[generated in 0.00048s (insertmanyvalues) 1/21 (ordered; batch not supported)] ("One Day Cup Women's League 2 final: Glamorgan eye glory against Yorkshire", 'https://www.bbc.com/sport/cricket/articles/czx071xn7xxo', '2025-09-14 07:52:29.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/21 (ordered; batch not supported)] ('Juventus v Borussia Dortmund', 'https://www.bbc.com/sport/football/live/ckgyzn3vx4mt', '2025-09-15 03:00:55.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/21 (ordered; batch not supported)] ('Boston United v Sunderland U21', 'https://www.bbc.com/sport/football/live/cx2r9k4n587t', '2025-09-15 03:00:55.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/21 (ordered; batch not supported)] ('Solihull Moors v Burnley U21', 'https://www.bbc.com/sport/football/live/cq5jze3ldwxt', '2025-09-15 03:00:54.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/21 (ordered; batch not supported)] ('Brackley Town v Manchester United U21', 'https://www.bbc.com/sport/football/live/c8jm071yz9mt', '2025-09-15 03:00:54.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 6/21 (ordered; batch not supported)] ('Truro City v Fulham U21', 'https://www.bbc.com/sport/football/live/cddmy4z67ymt', '2025-09-15 03:00:54.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 7/21 (ordered; batch not supported)] ('América de Cali v Atlético Bucaramanga', 'https://www.bbc.com/sport/football/live/cy7pxj3zmkkt', '2025-09-15 03:00:55.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 8/21 (ordered; batch not supported)] ('Benfica v Qarabağ', 'https://www.bbc.com/sport/football/live/c99gnv4rz35t', '2025-09-15 03:00:55.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 9/21 (ordered; batch not supported)] ('Durban City v Siwelele', 'https://www.bbc.com/sport/football/live/cn5q2zkw559t', '2025-09-15 03:00:55.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 10/21 (ordered; batch not supported)] ('PSV v Union Saint-Gilloise', 'https://www.bbc.com/sport/football/live/cvg4wdnxg47t', '2025-09-15 03:00:55.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 11/21 (ordered; batch not supported)] ('Real Madrid v Olympique Marseille', 'https://www.bbc.com/sport/football/live/cjw72dnl36dt', '2025-09-15 03:00:55.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 12/21 (ordered; batch not supported)] ("Finale of classical music's biggest night wows audience at Last Night of the Proms", 'https://www.bbc.com/news/live/c79v8vn3rjvt', '2025-09-13 21:49:50.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 13/21 (ordered; batch not supported)] ('Animal shelter evacuated after FBI incinerates meth at facility', 'https://www.bbc.com/news/articles/cly7wzp23lpo', '2025-09-13 20:22:03.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 14/21 (ordered; batch not supported)] ('Who won the World Tram Driver Championship 2025?', 'https://www.bbc.com/newsround/articles/ckgy14l7xj1o', '2025-09-14 09:56:42.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 15/21 (ordered; batch not supported)] ("Boy 'oblivious' to his popularity after Oasis imitation goes viral", 'https://www.bbc.com/news/articles/cx2r984e7jlo', '2025-09-15 05:29:34.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 16/21 (ordered; batch not supported)] ('Starmer facing leadership questions after Mandelson sacking', 'https://www.bbc.com/news/articles/ce32qepq12qo', '2025-09-15 09:51:12.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 17/21 (ordered; batch not supported)] ('Man arrested in Birmingham over online people smuggling posts', 'https://www.bbc.com/news/articles/cvg497zd41ko', '2025-09-15 15:55:06.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 18/21 (ordered; batch not supported)] ('Two rescued after vehicle ends up on roof in ditch in Scunthorpe', 'https://www.bbc.com/news/articles/cvg9n615207o', '2025-09-15 15:52:58.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 19/21 (ordered; batch not supported)] ('Christian climate activists arrested after Bath Abbey protest', 'https://www.bbc.com/news/articles/cwy9q189029o', '2025-09-14 09:56:28.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 20/21 (ordered; batch not supported)] ("World Athletics Championships medal table & what's on Tuesday", 'https://www.bbc.com/sport/athletics/articles/cwywnlv10kpo', '2025-09-15 15:58:31.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 21/21 (ordered; batch not supported)] ('Belarus and Russia stage joint military drills', 'https://www.bbc.com/news/videos/cx2prn617nyo', '2025-09-15 15:57:14.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00039s] ('2025-09-15 20:36:59.731842',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00092s] ('2025-09-15 20:37:49.155562',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00070s] ('2025-09-15 20:38:51.928181',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00070s] ('2025-09-15 20:40:08.300772',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00049s] ('2025-09-15 20:42:50.929634',)
+INFO:googleapiclient.discovery_cache:file_cache is only supported with oauth2client<4.0.0
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00049s] ('2025-09-15 20:47:45.954038',)
+INFO:googleapiclient.discovery_cache:file_cache is only supported with oauth2client<4.0.0
+INFO:sqlalchemy.engine.Engine:ROLLBACK

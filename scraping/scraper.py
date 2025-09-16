@@ -1,25 +1,6 @@
 import requests
-import json
 import bs4
 import logging
-
-
-# FILE_PATH = r"C:\Users\rvisw\OneDrive\Desktop\shashank_Project\content_creation_agent\data"
-# JSON_FILE_PATH = r"C:\Users\rvisw\OneDrive\Desktop\shashank_Project\content_creation_agent\data\urls.json"
-
-# with open(JSON_FILE_PATH, "r", encoding="utf-8") as f:
-#     data = json.load(f)
-
-# urls = []
-
-# # url = "https://en.wikipedia.org/w/api.php"
-    
-# # urls = ["https://en.wikipedia.org/wiki/Blackbeard"]
-
-# for item in data["items"]:
-#     urls.append(item["link"])
-
-
 
 logger = logging.getLogger(__name__)
 
@@ -36,35 +17,38 @@ def scrape(url):
         response = requests.get(url, headers=headers, timeout=10)
         response.raise_for_status()
     except Exception as e:
-        logging.error(f"Error fetching {url}: {e}")
+        logger.error(f"Error fetching {url}: {e}")
         return {} # If you take a list of urls, change to [].
 
     soup = bs4.BeautifulSoup(response.text, 'html.parser')
-    title = soup.find('title').get_text()
-    content = soup.find('div', {'class': 'mw-content-ltr'})
-    paragraphs = content.find_all('p') if content else []
 
-    results = []
-    for paragraph in paragraphs:
+    article = soup.find("article")
+    if not article:
+        return {}
         
-        text = paragraph.get_text().strip()
-        results.append(text)
+    try: 
+        title = article.find("h1").get_text(separator="\n", strip=True)
+    except Exception as e:
+        title = ""
+        logger.info("Null Title due to error: {e}")
+        
+    try: 
+        content = article.get_text(separator="\n", strip=True)
+    except Exception as e:
+        logger.error("Null Content due to error: {e}")
+        return {}
     
-    page_content = "\n".join(results)
-    
+       
     return {
         "title": title, 
-        "content": page_content
+        "content": content
     }
 
-    # file_path_raw = os.path.join(
-    #     FILE_PATH,
-    #     "raw",
-    #     f"wiki_page_{i}.txt"
-    # )
-    
-    # with open(file_path_raw, "w", encoding="utf-8") as f:
-    #     f.write(page_content)
         
-    
-    
+if __name__ == "__main__":
+    url = "https://www.bbc.com/news/articles/c931led1q37o"
+    article = scrape(url)
+    with open("test_news.txt", "w", encoding="utf-8") as f:
+        f.write(article["content"])
+        
+    print(article)

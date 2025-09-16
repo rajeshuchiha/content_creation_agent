@@ -1,0 +1,1 @@
+datetime.now() - timedelta(days=1)
