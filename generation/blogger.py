@@ -4,6 +4,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+from google.auth.exceptions import RefreshError
 
 def postBlog(text):
 
@@ -14,10 +15,13 @@ def postBlog(text):
         
     if not creds or not creds.valid:
         
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
+        try:
+            if creds and creds.expired and creds.refresh_token:
+                creds.refresh(Request())
+            else:
+                raise RefreshError("Invalid or missing refresh token")
         
-        else:
+        except RefreshError:
             flow = InstalledAppFlow.from_client_secrets_file(
                 'client_secrets.json',
                 scopes=["https://www.googleapis.com/auth/blogger"]

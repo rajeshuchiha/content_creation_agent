@@ -94,3 +94,743 @@ WHERE "Articles".timestamp >= ?
 INFO:sqlalchemy.engine.Engine:[generated in 0.00049s] ('2025-09-15 20:47:45.954038',)
 INFO:googleapiclient.discovery_cache:file_cache is only supported with oauth2client<4.0.0
 INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-index-com-news.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-3.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[generated in 0.00014s (insertmanyvalues) 1/5 (ordered; batch not supported)] ("It's that time of year again - the annual New Forest pig pannage", 'https://www.bbc.com/news/videos/c1kw8mymjr3o', '2025-09-17 10:36:29.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/5 (ordered; batch not supported)] ('World Athletics Championships: Beatrice Chebet focused on historic double in Tokyo', 'https://www.bbc.com/sport/athletics/articles/cddm2j73n3eo', '2025-09-17 11:57:59.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/5 (ordered; batch not supported)] ("New flamingo chicks 'amazing turnaround' for Isle of Man park", 'https://www.bbc.com/news/articles/cj9z3g8v748o', '2025-09-17 11:57:57.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/5 (ordered; batch not supported)] ('G4D Open to be played at Celtic Manor from 2026', 'https://www.bbc.com/sport/golf/articles/c87y3138v2zo', '2025-09-17 11:44:16.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/5 (ordered; batch not supported)] ('Port of Felixstowe to double its fleet of self-driving trucks', 'https://www.bbc.com/news/articles/cx25xg0qw75o', '2025-09-17 17:44:42.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00050s] ('2025-09-17 11:12:13.118886',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00067s] ('2025-09-17 11:26:20.734046',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00053s] ('2025-09-17 11:35:32.558540',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00058s] ('2025-09-17 11:57:55.504830',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00057s] ('2025-09-17 11:59:50.713002',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00050s] ('2025-09-17 12:12:09.166113',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:googleapiclient.discovery_cache:file_cache is only supported with oauth2client<4.0.0
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-index-com-news.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-3.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[generated in 0.00016s (insertmanyvalues) 1/5 (ordered; batch not supported)] ('Port of Felixstowe to double its fleet of self-driving trucks', 'https://www.bbc.com/news/articles/cx25xg0qw75o', '2025-09-17 17:44:42.000000')
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00054s] ('2025-09-17 12:21:20.133270',)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:googleapiclient.discovery_cache:file_cache is only supported with oauth2client<4.0.0
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-index-com-news.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-3.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[generated in 0.00030s (insertmanyvalues) 1/5 (ordered; batch not supported)] ('Class resumes at Utah Valley University after Charlie Kirk shooting', 'https://www.bbc.com/news/videos/c203nweed07o', '2025-09-18 14:30:37.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/5 (ordered; batch not supported)] ('When will UK interest rates fall again and how do they affect mortgages?', 'https://www.bbc.com/news/articles/c3dky111m40o', '2025-09-18 11:24:26.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/5 (ordered; batch not supported)] ('Al Ahli v Al Hilal', 'https://www.bbc.com/sport/football/live/c4g52608pdgt', '2025-09-18 03:01:01.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/5 (ordered; batch not supported)] ('Rio Ave v Porto', 'https://www.bbc.com/sport/football/live/cpw1z90q15dt', '2025-09-18 03:01:01.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/5 (ordered; batch not supported)] ('Derry City v Shelbourne', 'https://www.bbc.com/sport/football/live/c1dqr16nevzt', '2025-09-18 03:00:59.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:scraping.news_scraper:Processing: https://www.businesstoday.in/rssfeeds/news-sitemap.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-index-com-news.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-3.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[generated in 0.00017s (insertmanyvalues) 1/5 (ordered; batch not supported)] ("Championship revamp needed to address 'dysfunctional' calendar, says Leics chairman", 'https://www.bbc.com/sport/cricket/articles/cvg4nym343eo', '2025-09-18 14:31:03.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/5 (ordered; batch not supported)] ('Pick of the stats: Leicester City v Coventry City', 'https://www.bbc.com/sport/football/articles/c75q4rrp4x7o', '2025-09-19 10:12:28.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/5 (ordered; batch not supported)] ('Luke Thomas: Leicester City defender signs new four-year contract', 'https://www.bbc.com/sport/football/articles/c79vlqnjp20o', '2025-09-19 10:15:01.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/5 (ordered; batch not supported)] ('Lindisfarne Nature Reserve launches new conservation hub', 'https://www.bbc.com/news/articles/cvg4vp0079do', '2025-09-19 10:12:25.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/5 (ordered; batch not supported)] ('When is the 2025 autumn equinox and what is it?', 'https://www.bbc.com/weather/articles/cwynx6xy3gyo', '2025-09-19 10:15:53.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:scraping.news_scraper:Processing: https://www.businesstoday.in/rssfeeds/news-sitemap.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[cached since 2.344s ago (insertmanyvalues) 1/5 (ordered; batch not supported)] (' UK tops global student destination rankings for Fall 2025 as focus shifts away from\xa0US ', ' https://www.businesstoday.in/nri/study/story/uk-tops-global-student-destination-rankings-for-fall-2025-as-focus-shifts-away-from-us-494857-2025-09-19', '2025-09-19 16:13:06.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/5 (ordered; batch not supported)] (' Sensex falls 388 pts, Nifty below 25,350 on profit booking; Adani stocks rally ', ' https://www.businesstoday.in/markets/stocks/story/stock-market-sensex-falls-388-pts-nifty-below-25350-on-profit-booking-adani-stocks-rally-494850-2025-09-19', '2025-09-19 16:06:46.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/5 (ordered; batch not supported)] (' West losing appeal? Viral post claims Indians abroad shifting from permanent emigration to 5-year stints ', ' https://www.businesstoday.in/nri/visa/story/west-losing-appeal-viral-post-claims-indians-abroad-shifting-from-permanent-emigration-to-5-year-stints-494848-2025-09-19', '2025-09-19 15:57:28.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/5 (ordered; batch not supported)] (" From markets to gold, IPO boom and FII flows, what Choice Broking's Utsav Verma has to say ", ' https://www.businesstoday.in/markets/story/from-stock-markets-to-gold-ipo-boom-and-fii-flows-what-choice-brokings-utsav-verma-has-to-say-494838-2025-09-19', '2025-09-19 15:54:10.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/5 (ordered; batch not supported)] (' Celebrated Assamese singer Zubeen Garg passes away after scuba diving accident ', ' https://www.businesstoday.in/trending/entertainment/story/celebrated-assamese-singer-zubeen-garg-passes-away-after-scuba-diving-accident-494837-2025-09-19', '2025-09-19 15:51:23.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:scraping.news_scraper:Processing: https://www.espn.com/googlenewssitemap
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[cached since 6.678s ago (insertmanyvalues) 1/5 (ordered; batch not supported)] ('Fernando Alonso says 2026 could be his last year in F1', 'https://www.espn.com/f1/story/_/id/46310853/fernando-alonso-says-2026-last-year-f1', '2025-09-19 10:30:18.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/5 (ordered; batch not supported)] ('LIVE UWCL draw: Chelsea land Barcelona', 'https://www.espn.com/soccer/story/_/id/46291063/uefa-womens-champions-league-draw-2025-26-live-blog-group-league-phase-draw', '2025-09-19 10:28:50.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/5 (ordered; batch not supported)] ('Barcelona-PSG in Olympic Stadium amid Camp Nou uncertainity', 'https://www.espn.com/soccer/story/_/id/46310805/barcelona-psg-olympic-stadium-amid-camp-nou-uncertainity', '2025-09-19 10:10:56.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/5 (ordered; batch not supported)] ('Follow live: Noah Lyles set for 200m final, three Aussies racing in 800m semis', 'https://www.espn.com/olympics/story/_/id/46310311/world-athletics-championships-live-news-results-blog-day-7-200m-final-gout-gout-noah-lyles-bryan-levell-letsile-tebogo-jess-hull', '2025-09-19 10:29:15.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/5 (ordered; batch not supported)] ('Axed Demons coach Goodwin finds new interstate home', 'https://www.espn.com/afl/story/_/id/46310861/afl-axed-melbourne-demons-coach-simon-goodwin-finds-new-interstate-home-sydney-swans', '2025-09-19 10:19:37.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:scraping.news_scraper:Processing: https://www.espncricinfo.com/sitemap/news-sitemap.xml
+ERROR:root:Error fetching https://www.espncricinfo.com/sitemap/news-sitemap.xml: 403 Client Error: Forbidden for url: https://www.espncricinfo.com/sitemap/news-sitemap.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-index-com-news.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-3.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[generated in 0.00035s (insertmanyvalues) 1/5 (ordered; batch not supported)] ("Championship revamp needed to address 'dysfunctional' calendar, says Leics chairman", 'https://www.bbc.com/sport/cricket/articles/cvg4nym343eo', '2025-09-18 14:31:03.000000')
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-index-com-news.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-3.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[generated in 0.00017s (insertmanyvalues) 1/5 (ordered; batch not supported)] ("Championship revamp needed to address 'dysfunctional' calendar, says Leics chairman", 'https://www.bbc.com/sport/cricket/articles/cvg4nym343eo', '2025-09-18 14:31:03.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/5 (ordered; batch not supported)] ('Pick of the stats: Leicester City v Coventry City', 'https://www.bbc.com/sport/football/articles/c75q4rrp4x7o', '2025-09-19 10:12:28.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/5 (ordered; batch not supported)] ('Luke Thomas: Leicester City defender signs new four-year contract', 'https://www.bbc.com/sport/football/articles/c79vlqnjp20o', '2025-09-19 10:15:01.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/5 (ordered; batch not supported)] ('Lindisfarne Nature Reserve launches new conservation hub', 'https://www.bbc.com/news/articles/cvg4vp0079do', '2025-09-19 10:12:25.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/5 (ordered; batch not supported)] ('When is the 2025 autumn equinox and what is it?', 'https://www.bbc.com/weather/articles/cwynx6xy3gyo', '2025-09-19 10:15:53.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:scraping.news_scraper:Processing: https://www.businesstoday.in/rssfeeds/news-sitemap.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[cached since 3.648s ago (insertmanyvalues) 1/5 (ordered; batch not supported)] (' Nepal protests: KP Sharma Oli says govt never gave orders to fire at Gen-Z protesters ', ' https://www.businesstoday.in/world/story/nepal-protests-kp-sharma-oli-says-govt-never-gave-orders-to-fire-at-gen-z-protesters-494855-2025-09-19', '2025-09-19 16:17:32.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/5 (ordered; batch not supported)] (' UK tops global student destination rankings for Fall 2025 as focus shifts away from\xa0US ', ' https://www.businesstoday.in/nri/study/story/uk-tops-global-student-destination-rankings-for-fall-2025-as-focus-shifts-away-from-us-494857-2025-09-19', '2025-09-19 16:13:06.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/5 (ordered; batch not supported)] (' Sensex falls 388 pts, Nifty below 25,350 on profit booking; Adani stocks rally ', ' https://www.businesstoday.in/markets/stocks/story/stock-market-sensex-falls-388-pts-nifty-below-25350-on-profit-booking-adani-stocks-rally-494850-2025-09-19', '2025-09-19 16:06:46.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/5 (ordered; batch not supported)] (' West losing appeal? Viral post claims Indians abroad shifting from permanent emigration to 5-year stints ', ' https://www.businesstoday.in/nri/visa/story/west-losing-appeal-viral-post-claims-indians-abroad-shifting-from-permanent-emigration-to-5-year-stints-494848-2025-09-19', '2025-09-19 15:57:28.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/5 (ordered; batch not supported)] (" From markets to gold, IPO boom and FII flows, what Choice Broking's Utsav Verma has to say ", ' https://www.businesstoday.in/markets/story/from-stock-markets-to-gold-ipo-boom-and-fii-flows-what-choice-brokings-utsav-verma-has-to-say-494838-2025-09-19', '2025-09-19 15:54:10.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:scraping.news_scraper:Processing: https://www.espn.com/googlenewssitemap
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[cached since 7.14s ago (insertmanyvalues) 1/5 (ordered; batch not supported)] ("Women's Champions League draw: Arsenal to face Bayern, Chelsea get Barcelona", 'https://www.espn.com/soccer/story/_/id/46310748/women-champions-league-draw-arsenal-bayern-munich-chelsea-barcelona', '2025-09-19 10:35:43.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/5 (ordered; batch not supported)] ('Fernando Alonso says 2026 could be his last year in F1', 'https://www.espn.com/f1/story/_/id/46310853/fernando-alonso-says-2026-last-year-f1', '2025-09-19 10:30:18.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/5 (ordered; batch not supported)] ('LIVE UWCL draw: Chelsea land Barcelona', 'https://www.espn.com/soccer/story/_/id/46291063/uefa-womens-champions-league-draw-2025-26-live-blog-group-league-phase-draw', '2025-09-19 10:28:50.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/5 (ordered; batch not supported)] ('Barcelona-PSG in Olympic Stadium amid Camp Nou uncertainity', 'https://www.espn.com/soccer/story/_/id/46310805/barcelona-psg-olympic-stadium-amid-camp-nou-uncertainity', '2025-09-19 10:10:56.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/5 (ordered; batch not supported)] ('Follow live: Noah Lyles set for 200m final, three Aussies racing in 800m semis', 'https://www.espn.com/olympics/story/_/id/46310311/world-athletics-championships-live-news-results-blog-day-7-200m-final-gout-gout-noah-lyles-bryan-levell-letsile-tebogo-jess-hull', '2025-09-19 10:29:15.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:scraping.news_scraper:Processing: https://www.espncricinfo.com/sitemap/news-sitemap.xml
+ERROR:root:Error fetching https://www.espncricinfo.com/sitemap/news-sitemap.xml: 403 Client Error: Forbidden for url: https://www.espncricinfo.com/sitemap/news-sitemap.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00062s] ('2025-09-18 16:26:07.344350',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:googleapiclient.discovery_cache:file_cache is only supported with oauth2client<4.0.0
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[cached since 74.7s ago] ('2025-09-18 16:27:22.044805',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:googleapiclient.discovery_cache:file_cache is only supported with oauth2client<4.0.0
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[cached since 115s ago] ('2025-09-18 16:28:02.367356',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:googleapiclient.discovery_cache:file_cache is only supported with oauth2client<4.0.0
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[cached since 152.3s ago] ('2025-09-18 16:28:39.641094',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:googleapiclient.discovery_cache:file_cache is only supported with oauth2client<4.0.0
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[cached since 194.2s ago] ('2025-09-18 16:29:21.544849',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:googleapiclient.discovery_cache:file_cache is only supported with oauth2client<4.0.0
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-index-com-news.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-3.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-2.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-1.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[generated in 0.00078s (insertmanyvalues) 1/15 (ordered; batch not supported)] ("Championship revamp needed to address 'dysfunctional' calendar, says Leics chairman", 'https://www.bbc.com/sport/cricket/articles/cvg4nym343eo', '2025-09-18 14:31:03.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/15 (ordered; batch not supported)] ('Pick of the stats: Leicester City v Coventry City', 'https://www.bbc.com/sport/football/articles/c75q4rrp4x7o', '2025-09-19 10:12:28.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/15 (ordered; batch not supported)] ('Luke Thomas: Leicester City defender signs new four-year contract', 'https://www.bbc.com/sport/football/articles/c79vlqnjp20o', '2025-09-19 10:15:01.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/15 (ordered; batch not supported)] ('Lindisfarne Nature Reserve launches new conservation hub', 'https://www.bbc.com/news/articles/cvg4vp0079do', '2025-09-19 10:12:25.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/15 (ordered; batch not supported)] ('When is the 2025 autumn equinox and what is it?', 'https://www.bbc.com/weather/articles/cwynx6xy3gyo', '2025-09-19 10:15:53.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 6/15 (ordered; batch not supported)] ('Newcastle news:BBC Radio Newcastle spoke to fans after Barcelona defeat', 'https://www.bbc.com/sport/football/articles/c62n79l4drko', '2025-09-19 08:21:00.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 7/15 (ordered; batch not supported)] ('Champions League Highlights: Man City 2-0 Napoli', 'https://www.bbc.com/sport/football/videos/cly1l016q65o', '2025-09-18 21:06:44.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 8/15 (ordered; batch not supported)] ('BBC News quiz of the week: Why were these nuns on the run?', 'https://www.bbc.com/news/articles/cn5qk09v151o', '2025-09-18 17:40:15.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 9/15 (ordered; batch not supported)] ("Dr Punam's Golden Milk", 'https://www.bbc.com/articles/cg7d5mxd53no', '2025-09-18 11:43:19.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 10/15 (ordered; batch not supported)] ("Women's Rugby World Cup 2025: England v France semi-final preview, kick-off time, teams and stats", 'https://www.bbc.com/sport/rugby-union/articles/cd63ged31n0o', '2025-09-19 06:47:13.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 11/15 (ordered; batch not supported)] ('Pick of the stats: Derby County v Preston North End', 'https://www.bbc.com/sport/football/articles/cx2xqvk1n5ko', '2025-09-19 10:55:11.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 12/15 (ordered; batch not supported)] ("First migrant deported to France under 'one in one out' deal", 'https://www.bbc.com/news/articles/ckg653r06jgo', '2025-09-18 19:04:07.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 13/15 (ordered; batch not supported)] ('Jack Vale: Northampton Town sign former Blackburn Rovers striker', 'https://www.bbc.com/sport/football/articles/cz9jkdgly0vo', '2025-09-18 15:59:47.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 14/15 (ordered; batch not supported)] ('Your guide to the Rugby World Cup 2025 semi-finals', 'https://www.bbc.com/newsround/articles/cly1lqn4p15o', '2025-09-18 13:06:36.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 15/15 (ordered; batch not supported)] ("Super League: Hull KR 28-20 Warrington Wolves: Robins win League Leaders' Shield", 'https://www.bbc.com/sport/rugby-league/articles/c39rzxxpyjeo', '2025-09-18 21:55:47.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:scraping.news_scraper:Processing: https://www.businesstoday.in/rssfeeds/news-sitemap.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[cached since 2.392s ago (insertmanyvalues) 1/5 (ordered; batch not supported)] (' Bajaj Holdings, BEML, Swan Corp among stocks to turn ex-dividend on Sept 22 ', ' https://www.businesstoday.in/markets/stocks/story/bajaj-holdings-beml-swan-corp-among-stocks-to-turn-ex-dividend-on-sept-22-494862-2025-09-19', '2025-09-19 16:51:23.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/5 (ordered; batch not supported)] (" 'Brands won't touch you with a 10-ft pole if...': User says full-time influencing is dead ", ' https://www.businesstoday.in/latest/trends/story/brands-wont-touch-you-with-a-10-ft-pole-if-user-says-full-time-influencing-is-dead-494861-2025-09-19', '2025-09-19 16:50:08.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/5 (ordered; batch not supported)] (' Sensex falls 387 pts, Nifty below 25,350 on profit booking; Adani stocks rally ', ' https://www.businesstoday.in/markets/stocks/story/stock-market-sensex-falls-388-pts-nifty-below-25350-on-profit-booking-adani-stocks-rally-494850-2025-09-19', '2025-09-19 16:35:06.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/5 (ordered; batch not supported)] (' Nepal protests: KP Sharma Oli says govt never gave orders to fire at Gen-Z protesters ', ' https://www.businesstoday.in/world/story/nepal-protests-kp-sharma-oli-says-govt-never-gave-orders-to-fire-at-gen-z-protesters-494855-2025-09-19', '2025-09-19 16:17:32.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/5 (ordered; batch not supported)] (' UK tops global student destination rankings for Fall 2025 as focus shifts away from\xa0US ', ' https://www.businesstoday.in/nri/study/story/uk-tops-global-student-destination-rankings-for-fall-2025-as-focus-shifts-away-from-us-494857-2025-09-19', '2025-09-19 16:13:06.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:scraping.news_scraper:Processing: https://www.espn.com/googlenewssitemap
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[cached since 6.284s ago (insertmanyvalues) 1/5 (ordered; batch not supported)] ('Agent: Kuminga wants player option, would take qualifying offer', 'https://www.espn.com/nba/story/_/id/46310583/agent-kuminga-wants-player-option-take-qualifying-offer', '2025-09-19 11:09:59.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/5 (ordered; batch not supported)] ('Fantasy baseball lineup advice and betting tips for Friday', 'https://www.espn.com/fantasy/baseball/story/_/id/46273631/fantasy-baseball-pitcher-rankings-lineup-advice-betting-tips-mlb-daily-notes-2025-friday-september-19', '2025-09-19 11:06:52.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/5 (ordered; batch not supported)] ("Chelsea's João Pedro on Cole Palmer partnership: 'May it continue'", 'https://www.espn.com/soccer/story/_/id/46311015/chelsea-joao-pedro-cole-palmer-partnership-continue', '2025-09-19 11:00:54.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/5 (ordered; batch not supported)] ("Sign my jersey! Even Clayton Kershaw's opponents want one", 'https://www.espn.com/mlb/story/_/id/46302840/mlb-2025-clayton-kershaw-los-angeles-dodgers-signed-jerseys-retirement', '2025-09-19 10:59:11.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/5 (ordered; batch not supported)] ('MLB 2025: The 5 things that will decide the AL West race', 'https://www.espn.com/mlb/story/_/id/46302294/mlb-2025-al-west-mariners-astros-division-title-playoffs-wild-card', '2025-09-19 10:40:55.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:scraping.news_scraper:Processing: https://www.espncricinfo.com/sitemap/news-sitemap.xml
+ERROR:root:Error fetching https://www.espncricinfo.com/sitemap/news-sitemap.xml: 403 Client Error: Forbidden for url: https://www.espncricinfo.com/sitemap/news-sitemap.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-index-com-news.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-3.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-2.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-1.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[generated in 0.00024s (insertmanyvalues) 1/15 (ordered; batch not supported)] ('Pick of the stats: Leicester City v Coventry City', 'https://www.bbc.com/sport/football/articles/c75q4rrp4x7o', '2025-09-19 10:12:28.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/15 (ordered; batch not supported)] ('World Athletics Championships: Keely Hodgkinson and Georgia Hunter-Bell reach 800m final', 'https://www.bbc.com/sport/athletics/videos/cm2d11py7mzo', '2025-09-19 12:30:24.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/15 (ordered; batch not supported)] ('Luke Thomas: Leicester City defender signs new four-year contract', 'https://www.bbc.com/sport/football/articles/c79vlqnjp20o', '2025-09-19 10:15:01.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/15 (ordered; batch not supported)] ('When is the 2025 autumn equinox and what is it?', 'https://www.bbc.com/weather/articles/cwynx6xy3gyo', '2025-09-19 10:15:53.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/15 (ordered; batch not supported)] ('Lindisfarne Nature Reserve launches new conservation hub', 'https://www.bbc.com/news/articles/cvg4vp0079do', '2025-09-19 10:12:25.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 6/15 (ordered; batch not supported)] ('Newcastle news:BBC Radio Newcastle spoke to fans after Barcelona defeat', 'https://www.bbc.com/sport/football/articles/c62n79l4drko', '2025-09-19 08:21:00.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 7/15 (ordered; batch not supported)] ('Nearly 30,000 LEZ fines issued in Glasgow', 'https://www.bbc.com/news/articles/czx0ppgn33xo', '2025-09-19 12:29:18.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 8/15 (ordered; batch not supported)] ('Man dies following crash on Sywell village road', 'https://www.bbc.com/news/articles/ce9r328ej9zo', '2025-09-19 06:52:58.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 9/15 (ordered; batch not supported)] ('Wrexham manager Phil Parkinson speculation a disgrace - Shaun Harvey', 'https://www.bbc.com/sport/football/articles/c7491z8k4jzo', '2025-09-19 10:58:58.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 10/15 (ordered; batch not supported)] ('Middlesbrough and Redcar infection rise not linked to eating out - report', 'https://www.bbc.com/news/articles/cz690325q4vo', '2025-09-19 13:37:46.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 11/15 (ordered; batch not supported)] ('Pick of the stats: Derby County v Preston North End', 'https://www.bbc.com/sport/football/articles/cx2xqvk1n5ko', '2025-09-19 10:55:11.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 12/15 (ordered; batch not supported)] ("Clive King's Stig of the Dump inspired by the village of Ash", 'https://www.bbc.com/news/articles/c62n75yr76no', '2025-09-20 05:50:00.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 13/15 (ordered; batch not supported)] ('BBC Make A Difference Awards: Charlie the horse helps disabled riders', 'https://www.bbc.com/news/articles/cx2535jgqwjo', '2025-09-20 05:50:22.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 14/15 (ordered; batch not supported)] ('Trip continues for theft victim on gifted Nottingham motorbike ', 'https://www.bbc.com/news/articles/c20vpdy94qxo', '2025-09-19 17:20:45.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 15/15 (ordered; batch not supported)] ('World Athletics Championships: Rai Benjamin takes 400m hurdles gold after disqualification drama', 'https://www.bbc.com/sport/athletics/videos/czx0p012zg2o', '2025-09-19 13:32:36.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:scraping.news_scraper:Processing: https://www.businesstoday.in/rssfeeds/news-sitemap.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[cached since 2.429s ago (insertmanyvalues) 1/5 (ordered; batch not supported)] (' Ashish Kacholia’s multibagger stock to turn ex-dividend next week; do you own it? ', ' https://www.businesstoday.in/markets/stocks/story/ashish-kacholias-multibagger-stock-to-turn-ex-dividend-next-week-do-you-own-it-494928-2025-09-20', '2025-09-20 11:43:04.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/5 (ordered; batch not supported)] (' Dividend, stock split, bonus: Adani Power, Nazara Tech, Pidilite to turn ex-date next week ', ' https://www.businesstoday.in/markets/stocks/story/dividend-stock-split-bonus-adani-power-nazara-tech-pidilite-to-turn-ex-date-next-week-494927-2025-09-20', '2025-09-20 11:35:36.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/5 (ordered; batch not supported)] (' Chhattisgarh HC rules no income tax on Rs 73 lakh land compensation, if... ', ' https://www.businesstoday.in/personal-finance/tax/story/chhattisgarh-high-court-income-tax-exemption-rs-73-lakh-land-compensation-nhai-494923-2025-09-20', '2025-09-20 11:23:29.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/5 (ordered; batch not supported)] (" 'Modi-Dolaand friendship expensive for India': Priyank Kharge takes sharp jibe at Trump's H-1B visa fee rise ", ' https://www.businesstoday.in/nri/visa/story/modi-dolaand-friendship-expensive-for-india-priyank-kharge-takes-sharp-jibe-at-trumps-h-1b-visa-fee-rise-494925-2025-09-20', '2025-09-20 11:14:12.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/5 (ordered; batch not supported)] (" Donald Trump's $100K H-1B visa fee: Everything you need to know, answered in 14 questions ", ' https://www.businesstoday.in/nri/visa/story/donald-trumps-100k-h-1b-visa-fee-everything-you-need-to-know-answered-in-14-questions-494920-2025-09-20', '2025-09-20 10:54:21.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:scraping.news_scraper:Processing: https://www.espn.com/googlenewssitemap
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[cached since 6.256s ago (insertmanyvalues) 1/5 (ordered; batch not supported)] ("Alyssa Thomas' 20-point triple-double leads Mercury past Liberty", 'https://www.espn.com/wnba/story/_/id/46318709/alyssa-thomas-20-point-triple-double-leads-mercury-liberty-wnba-semifinals', '2025-09-20 06:10:26.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/5 (ordered; batch not supported)] ('What are the longest postseason streaks in MLB history?', 'https://www.espn.com/mlb/story/_/id/41476231/what-longest-postseason-streaks-mlb-history', '2025-09-20 06:07:37.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/5 (ordered; batch not supported)] ('Who has the most triple-doubles in WNBA history? Key stats', 'https://www.espn.com/wnba/story/_/id/41247761/who-most-triple-doubles-wnba-history-key-stats', '2025-09-20 05:52:36.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/5 (ordered; batch not supported)] ('How do the WNBA playoffs work? Dates, format and more', 'https://www.espn.com/wnba/story/_/id/41147890/how-do-wnba-playoffs-work-dates-format-more', '2025-09-20 05:49:10.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/5 (ordered; batch not supported)] ('Royals rock Max Scherzer for 7 first-inning runs, bash Blue Jays 20-1', 'https://www.espn.com/mlb/story/_/id/46318365/royals-rock-max-scherzer-7-1st-inning-runs-rout-blue-jays-20-1', '2025-09-20 05:35:58.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00111s] ('2025-09-19 11:49:40.183971',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[cached since 39s ago] ('2025-09-19 11:50:19.183015',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00051s] ('2025-09-19 12:00:58.679320',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+WARNING:langchain_core.vectorstores.base:No relevant docs were retrieved using the relevance score threshold 0.8
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[cached since 22.6s ago] ('2025-09-19 12:01:21.276506',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+WARNING:langchain_core.vectorstores.base:No relevant docs were retrieved using the relevance score threshold 0.8
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[cached since 40.93s ago] ('2025-09-19 12:01:39.615041',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00054s] ('2025-09-19 12:03:03.404778',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00054s] ('2025-09-19 12:03:44.390474',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+WARNING:langchain_core.vectorstores.base:No relevant docs were retrieved using the relevance score threshold 0.8
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[cached since 20.26s ago] ('2025-09-19 12:04:04.647349',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00052s] ('2025-09-19 12:05:26.450954',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+WARNING:langchain_core.vectorstores.base:No relevant docs were retrieved using the relevance score threshold 0.6
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[cached since 21.85s ago] ('2025-09-19 12:05:48.297804',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".title AS "Articles_title" 
+FROM "Articles"
+INFO:sqlalchemy.engine.Engine:[generated in 0.00049s] ()
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".title AS "Articles_title" 
+FROM "Articles"
+INFO:sqlalchemy.engine.Engine:[generated in 0.00050s] ()
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00058s] ('2025-09-19 12:35:22.538321',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".title AS "Articles_title" 
+FROM "Articles"
+INFO:sqlalchemy.engine.Engine:[generated in 0.00038s] ()
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00051s] ('2025-09-19 12:37:51.793563',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".title AS "Articles_title" 
+FROM "Articles"
+INFO:sqlalchemy.engine.Engine:[generated in 0.00046s] ()
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00065s] ('2025-09-19 12:39:40.848635',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+WARNING:langchain_core.vectorstores.base:No relevant docs were retrieved using the relevance score threshold 0.6
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[cached since 19.28s ago] ('2025-09-19 12:40:00.124577',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".title AS "Articles_title" 
+FROM "Articles"
+INFO:sqlalchemy.engine.Engine:[generated in 0.00048s] ()
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00058s] ('2025-09-19 12:47:30.774261',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-index-com-news.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-3.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-2.xml
+INFO:scraping.news_scraper:Processing: https://www.bbc.com/sitemaps/https-sitemap-com-news-1.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[generated in 0.00023s (insertmanyvalues) 1/15 (ordered; batch not supported)] ('Pick of the stats: Leicester City v Coventry City', 'https://www.bbc.com/sport/football/articles/c75q4rrp4x7o', '2025-09-19 10:12:28.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/15 (ordered; batch not supported)] ('World Athletics Championships: Keely Hodgkinson and Georgia Hunter-Bell reach 800m final', 'https://www.bbc.com/sport/athletics/videos/cm2d11py7mzo', '2025-09-19 12:30:24.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/15 (ordered; batch not supported)] ('Luke Thomas: Leicester City defender signs new four-year contract', 'https://www.bbc.com/sport/football/articles/c79vlqnjp20o', '2025-09-19 10:15:01.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/15 (ordered; batch not supported)] ('When is the 2025 autumn equinox and what is it?', 'https://www.bbc.com/weather/articles/cwynx6xy3gyo', '2025-09-19 10:15:53.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/15 (ordered; batch not supported)] ('Lindisfarne Nature Reserve launches new conservation hub', 'https://www.bbc.com/news/articles/cvg4vp0079do', '2025-09-19 10:12:25.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 6/15 (ordered; batch not supported)] ('Newcastle news:BBC Radio Newcastle spoke to fans after Barcelona defeat', 'https://www.bbc.com/sport/football/articles/c62n79l4drko', '2025-09-19 08:21:00.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 7/15 (ordered; batch not supported)] ('Nearly 30,000 LEZ fines issued in Glasgow', 'https://www.bbc.com/news/articles/czx0ppgn33xo', '2025-09-19 12:29:18.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 8/15 (ordered; batch not supported)] ('Wrexham manager Phil Parkinson speculation a disgrace - Shaun Harvey', 'https://www.bbc.com/sport/football/articles/c7491z8k4jzo', '2025-09-19 10:58:58.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 9/15 (ordered; batch not supported)] ('Middlesbrough and Redcar infection rise not linked to eating out - report', 'https://www.bbc.com/news/articles/cz690325q4vo', '2025-09-19 13:37:46.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 10/15 (ordered; batch not supported)] ("Two men admit gang charges in relation to woman's Talbot Green death", 'https://www.bbc.com/news/articles/cvg4v4xrgmwo', '2025-09-19 13:40:09.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 11/15 (ordered; batch not supported)] ('Pick of the stats: Derby County v Preston North End', 'https://www.bbc.com/sport/football/articles/cx2xqvk1n5ko', '2025-09-19 10:55:11.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 12/15 (ordered; batch not supported)] ("Clive King's Stig of the Dump inspired by the village of Ash", 'https://www.bbc.com/news/articles/c62n75yr76no', '2025-09-20 05:50:00.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 13/15 (ordered; batch not supported)] ('BBC Make A Difference Awards: Charlie the horse helps disabled riders', 'https://www.bbc.com/news/articles/cx2535jgqwjo', '2025-09-20 05:50:22.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 14/15 (ordered; batch not supported)] ('Trip continues for theft victim on gifted Nottingham motorbike ', 'https://www.bbc.com/news/articles/c20vpdy94qxo', '2025-09-19 17:20:45.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 15/15 (ordered; batch not supported)] ('World Athletics Championships: Rai Benjamin takes 400m hurdles gold after disqualification drama', 'https://www.bbc.com/sport/athletics/videos/czx0p012zg2o', '2025-09-19 13:32:36.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:scraping.news_scraper:Processing: https://www.businesstoday.in/rssfeeds/news-sitemap.xml
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[cached since 3.464s ago (insertmanyvalues) 1/5 (ordered; batch not supported)] (' Selling dad’s old house? How you can pay Rs 9.08 lakh instead of Rs 12.25 lakh in capital gains tax ', ' https://www.businesstoday.in/personal-finance/tax/story/selling-dads-old-house-how-you-can-pay-rs-908-lakh-instead-of-rs-1225-lakh-in-capital-gains-tax-494937-2025-09-20', '2025-09-20 12:42:20.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/5 (ordered; batch not supported)] (' Vijay Kedia’s multibagger stock Sudarshan Chemical to turn ex-dividend on Sept 22 ', ' https://www.businesstoday.in/markets/stocks/story/vijay-kedias-multibagger-stock-sudarshan-chemical-to-turn-ex-dividend-on-sept-22-494936-2025-09-20', '2025-09-20 12:33:49.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/5 (ordered; batch not supported)] (" 'America’s loss is India’s gain': Amitabh Kant says Trump’s H-1B fee will gut US innovation ", ' https://www.businesstoday.in/nri/visa/story/americas-loss-is-indias-gain-amitabh-kant-says-trumps-h-1b-fee-will-gut-us-innovation-494935-2025-09-20', '2025-09-20 12:32:39.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/5 (ordered; batch not supported)] (" 'Direct hit to India’s IT talent': US immigration director slams Trump’s visa fee hike as discriminatory ", ' https://www.businesstoday.in/nri/visa/story/direct-hit-to-indias-it-talent-us-immigration-director-slams-trumps-visa-fee-hike-as-discriminatory-494934-2025-09-20', '2025-09-20 12:11:33.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/5 (ordered; batch not supported)] (" 'Aao, ab laut chalen': Radhika Gupta says Trump’s $100K H-1B shock is India’s opportunity ", ' https://www.businesstoday.in/nri/visa/story/aao-ab-laut-chalen-radhika-gupta-says-trumps-100k-h-1b-shock-is-indias-opportunity-494933-2025-09-20', '2025-09-20 12:09:18.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:scraping.news_scraper:Processing: https://www.espn.com/googlenewssitemap
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[cached since 7.422s ago (insertmanyvalues) 1/5 (ordered; batch not supported)] ("Dodgers' Kershaw soaks in ovation in possible L.A. farewell", 'https://www.espn.com/mlb/story/_/id/46318826/dodgers-kershaw-soaks-ovation-possible-la-farewell', '2025-09-20 06:51:33.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 2/5 (ordered; batch not supported)] ('Mabior Chol given three-match ban for Tom Stewart tackle', 'https://www.espn.com/afl/story/_/id/46319430/afl-preliminary-final-mabior-chol-three-match-ban-tackle-tom-stewart-concussion', '2025-09-20 06:49:40.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 3/5 (ordered; batch not supported)] ('WNBA playoff schedule 2025: How to watch semifinal games', 'https://www.espn.com/wnba/story/_/id/46030946/wnba-playoffs-schedule-2025-games-first-round-semifinals-finals-scores-results-news-highlights', '2025-09-20 06:16:22.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 4/5 (ordered; batch not supported)] ("Alyssa Thomas' 20-point triple-double leads Mercury past Liberty", 'https://www.espn.com/wnba/story/_/id/46318709/alyssa-thomas-20-point-triple-double-leads-mercury-liberty-wnba-semifinals', '2025-09-20 06:10:26.000000')
+INFO:sqlalchemy.engine.Engine:INSERT INTO "Articles" (title, url, timestamp) VALUES (?, ?, ?) RETURNING id
+INFO:sqlalchemy.engine.Engine:[insertmanyvalues 5/5 (ordered; batch not supported)] ('What are the longest postseason streaks in MLB history?', 'https://www.espn.com/mlb/story/_/id/41476231/what-longest-postseason-streaks-mlb-history', '2025-09-20 06:07:37.000000')
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".title AS "Articles_title" 
+FROM "Articles"
+INFO:sqlalchemy.engine.Engine:[generated in 0.00039s] ()
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00056s] ('2025-09-19 12:56:08.225359',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+WARNING:langchain_core.vectorstores.base:No relevant docs were retrieved using the relevance score threshold 0.6
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[cached since 21.49s ago] ('2025-09-19 12:56:29.712473',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".title AS "Articles_title" 
+FROM "Articles"
+INFO:sqlalchemy.engine.Engine:[generated in 0.00065s] ()
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00076s] ('2025-09-19 18:23:57.685971',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".title AS "Articles_title" 
+FROM "Articles"
+INFO:sqlalchemy.engine.Engine:[generated in 0.00049s] ()
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00093s] ('2025-09-19 18:26:37.832993',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:googleapiclient.discovery_cache:file_cache is only supported with oauth2client<4.0.0
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[cached since 35.82s ago] ('2025-09-19 18:27:13.657870',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+WARNING:langchain_core.vectorstores.base:No relevant docs were retrieved using the relevance score threshold 0.6
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[cached since 52.17s ago] ('2025-09-19 18:27:30.001695',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+WARNING:langchain_core.vectorstores.base:No relevant docs were retrieved using the relevance score threshold 0.6
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[cached since 62.12s ago] ('2025-09-19 18:27:39.959132',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+WARNING:langchain_core.vectorstores.base:No relevant docs were retrieved using the relevance score threshold 0.6
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT "Articles".id AS "Articles_id", "Articles".title AS "Articles_title", "Articles".url AS "Articles_url", "Articles".timestamp AS "Articles_timestamp" 
+FROM "Articles" 
+WHERE "Articles".timestamp >= ?
+INFO:sqlalchemy.engine.Engine:[cached since 77.04s ago] ('2025-09-19 18:27:54.876849',)
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:scraping.scraper:Null Title due to error: {e}
+INFO:sqlalchemy.engine.Engine:ROLLBACK

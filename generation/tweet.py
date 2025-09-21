@@ -15,5 +15,10 @@ client = tweepy.Client(bearer_token, api_key, api_key_secret, access_token, acce
 auth = tweepy.OAuth1UserHandler(api_key, api_key_secret, access_token, access_token_secret)
 api = tweepy.API(auth)
 
-text = "T-Rex: The ultimate apex predator! 🦖💪 Unmatched size & bite force. Modern giants don't compare! #TyrannosaurusRex #DinosaurPower"
-client.create_tweet(text=text)
+def postTweet(text):
+    
+    client.create_tweet(text=text)
+    
+if __name__ == "__main__":
+    text = "T-Rex: The ultimate apex predator! 🦖💪 Unmatched size & bite force. Modern giants don't compare! #TyrannosaurusRex #DinosaurPower"
+    postTweet(text)
