@@ -2,3 +2,4 @@ tokens.json
 .env
 .env
 client_secrets.json
+data/
